@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,6 +31,7 @@ public class HomeActivity extends AppCompatActivity {
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
     Toolbar toolbar;
+    ImageView imageView;
 
     private FirebaseRemoteConfig mFirebaseRemoteConfig;
     FirebaseRemoteConfigSettings remoteConfigSettings;
@@ -64,7 +67,12 @@ public class HomeActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         textView = findViewById(R.id.welcometv);
-        
+        imageView = findViewById(R.id.imagewelcome);
+
+        if (BuildConfig.FLAVOR.equals("Free")){
+            imageView.setVisibility(View.GONE);
+        }
+
     }
 
     @Override
