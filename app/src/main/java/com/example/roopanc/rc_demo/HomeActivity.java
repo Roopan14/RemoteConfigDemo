@@ -69,9 +69,9 @@ public class HomeActivity extends AppCompatActivity {
         textView = findViewById(R.id.welcometv);
         imageView = findViewById(R.id.imagewelcome);
 
-        if (BuildConfig.FLAVOR.equals("Free")){
+        /*if (BuildConfig.FLAVOR.equals("Free")){
             imageView.setVisibility(View.GONE);
-        }
+        }*/
 
     }
 
